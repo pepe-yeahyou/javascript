@@ -15,5 +15,10 @@ console.log(phoneNumber);
 
 // 키워드는 이름으로 쓸수 없음.
 
-var for="hello"
+/* var for="hello"
+var class=1;
+var null=1;
+
 console.log(for);
+ */
+

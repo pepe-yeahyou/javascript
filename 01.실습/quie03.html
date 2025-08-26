@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* 
+        1. 사용자에게 height를 실수형으로 입력받음
+        2. age를 정수형으로 입력받음
+           - 키가 140이상이고, 나이가 8세 이상일경우 자유로드롭을 탈 수 있다.
+           - 둘 중 하나라도 충족하지 않을경우 놀이기구를 탈 수 없다.
+         */
+
+         let height=parseFloat(prompt("키를 입력하세요."));
+         let age=parseInt(prompt("나이를 입력하세요."));
+
+         document.write("당신의 키는 :",height,"이고, 나이는 :",age,"입니다. <br>");
+
+         if (height >= 140 && age >= 8){
+            document.write("자이로드롭 ㄱㄱ 쫄? ");
+         }else{
+            document.write("자이로드롭 ㄴㄴ ㄲㅈ ");
+         }
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
