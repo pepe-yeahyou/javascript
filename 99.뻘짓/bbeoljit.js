@@ -2,6 +2,7 @@
 
 
 for (var i = 0; i < 10; i++) {
+    for(var z=0;z<3;z++){
 
     for (var j = 10; j > 0; j--) {
         if (i <= j) {
@@ -18,12 +19,14 @@ for (var i = 0; i < 10; i++) {
             process.stdout.write(" ");
         }
     }
+    }
 
     process.stdout.write("\n");
 }
 
 
 for (var l = 0; l < 10; l++) {
+    for(var z=0;z<3;z++){
 
     for (var m = 0; m < 10; m++) {
         if (l < m) {
@@ -40,7 +43,7 @@ for (var l = 0; l < 10; l++) {
             process.stdout.write("*");
         }
     }
-
+}
     process.stdout.write("\n");
 }
 

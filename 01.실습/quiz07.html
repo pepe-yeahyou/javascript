@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>99dan</title>
+</head>
+<script>
+    // 구구단을 입력받아, 입력받은 구구단을 출력하세요.
+
+    let input=parseInt(prompt("단수를 입력하세요"));
+    let i=1;
+    document.write("<h1>",input,"단</h1>");
+    while(i<10){
+        //document.write(input," x ",i," = ",input*i,"<br>");
+        //빽틱
+        document.write(`${input}*${i}=${input*i}<br>`) // 출력의 형식을 만든다
+        i++;
+    }
+    
+
+/*     for(let j=2; j<10; j++)
+    {
+        for(let k=1; k<10; k++)
+        document.write(j,"*",k,"=",j*k,"<br>");
+    } */
+
+
+</script>
+<body>
+    
+</body>
+</html>

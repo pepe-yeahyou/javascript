@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz / condition</title>
+    <script>
+        /* 
+         두 수를 입력받아서, 큰수와 작은수를 출력하면 됩니다.
+         단, 만약 같은 수라면 "같은수 입니다"를 출력합니다.
+        */
+
+        let input1=parseInt(prompt("첫번째 수를 입력하세요."));
+        let input2=parseInt(prompt("두번째 수를 입력하세요"));
+
+        if(input1 > input2){
+            document.write("큰 수는 :",input1,"이고, 작은수는 :",input2,"입니다.");
+        }else if(input1 < input2){
+            document.write("큰 수는 :",input2,"이고, 작은수는 :",input1,"입니다.");
+        }else{
+            document.write("첫번째 수 :",input1,"와, 두번째수 :",input2,"는 같은수 입니다.");
+        }        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

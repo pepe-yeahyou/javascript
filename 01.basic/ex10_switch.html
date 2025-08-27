@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch case</title>
+    <script>
+        let point = parseInt(prompt("점수를 입력하세요"));
+        
+        /*  
+         switch에는 실수 처리할수없음. 정수만 처리함
+         변수(정수,문자열) 또는 연산식을 처리할수 있음
+         범위를 잡고싶으면 /또는 %로 나눠서 재량껏 처리해야됨. 
+         case 문에서 if문을 중첩할 수 있다.
+         */
+        
+        switch(parseInt(point/10)) {
+            case 10:
+                if(point===100){
+                    document.write("A+학점");
+                }else{
+                    document.write("ㄴㄴ");
+                }
+                
+                break;
+            case 9:
+                if(point>=95 && point <100){
+                    document.write("A+학점");
+                }else{
+                    document.write("A학점");
+                }
+                
+                break;
+            case 8:
+                document.write("B학점");
+                break;
+            case 7:
+                document.write("C학점");
+                break;
+            case 6:
+                document.write("D학점");
+                break;
+            default:
+                document.write("F학점");
+                break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

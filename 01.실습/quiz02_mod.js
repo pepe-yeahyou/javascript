@@ -9,8 +9,8 @@
 */
 
 
- let box=prompt("바구니의 크?기를 입력하세요.");
- let app=prompt("사과의 개수를 입력하세요");
+// let box=prompt("바구니의 크?기를 입력하세요.");
+// let app=prompt("사과의 개수를 입력하세요");
 
 
 let req=parseInt(app%box)===0? parseInt(app/box) : parseInt(app/box)+1;

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+
+    
+</head>
+<body>
+    <h3>prompt가 아닌 input tag를 이용해서 문제를 풀어보자</h3>
+
+    <input type="text" id="box" placeholder="바구니의 개수는?">
+    <input type="text" id="app" placeholder="사과의 개수는?">
+    <button onclick="submitName()">제출</button>
+
+    <div id="result"></div>
+
+    <script>
+         function submitName() {
+            const box = parseInt(document.getElementById('box').value);
+            const app = parseInt(document.getElementById('app').value);
+
+            if (isNaN(box) || isNaN(app) || box <= 0) {
+                alert('숫자를 올바르게 입력하세요 (바구니 크기는 1 이상)');
+                return;
+            }
+
+            let req = (app % box === 0) ? (app / box) : Math.floor(app / box) + 1;
+
+            document.getElementById('result').innerHTML = 
+                `사과의 개수는: ${app}개이고, 바구니의 크기는: ${box}입니다.<br>` +
+                `필요한 바구니의 개수는 ${req}개 입니다.`;
+        }
+    </script>
+
+    
+
+
+
+
+</body>
+</html>
