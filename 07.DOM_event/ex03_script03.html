@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM baSic eVent</title>
+</head>
+<body>
+    <h3>표준이벤트(addeventlistener)</h3>
+    <button type="button" id="btn">눌러바라</button>
+
+    <script>
+        let btn=document.getElementById("btn");
+        //btn.addEventListener("이벤트종류","실행시킬함수");
+        //"on 키워드는 제외 (onclick -> click)"
+        //btn.addEventListener("click",sayhello);
+        //익명함수도 가능
+        btn.addEventListener("click",function(){alert("ㅎㅇ1");});
+
+        /* //일반함수
+        function sayhello(){
+            alert("ㅎㅇ");
+        }
+        */
+       btn.addEventListener("click",function(){alert("ㅂㅇ2");});
+
+        //이벤트 리스너 방식은 ☆동일한 이벤트★에 대해서 "여러개 등록"이 가능
+
+    </script>
+
+</body>
+</html>

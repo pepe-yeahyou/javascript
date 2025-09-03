@@ -29,5 +29,5 @@ function solution(num1, num2) {
 }
 
 
-console.log(solution(1,3));
+console.log(solution(7,2));
 

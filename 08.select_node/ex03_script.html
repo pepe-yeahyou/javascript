@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class="title">제목</h3>
+    <button id="btn">눌러봐용</button>
+    
+
+    <script>
+        //버튼을 누르면 제목을 바꾼다.
+        // 버튼에 이벤트 걸어, 이벤트 안에서 h3 태그를 얻음 -> 값을 바꿈
+        let btn=document.getElementById("btn");
+        let title=document.querySelector(".title");
+
+        btn.addEventListener("click",function(){
+            console.log(title.innerHTML);
+            //title.innerHTML="<b>졸려용</b>" //문자열이 태그로 인식
+            title.textContent="<b>졸려용</b>" //순수한 문자열 형태로 인식
+        });
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qUiz basIc evenT</title>
+</head>
+<body>
+    <h3>이벤트 실습</h3>
+
+    <h3>1. 셀렉트 태그의 주요 이벤트는 change</h3>
+    <select name="#" id="sel" onclick="">
+        <option value="">사과</option>
+        <option value="">멜론</option>
+        <option value="">오렌지</option>
+    </select>
+
+    <h3>2. 인풋태그의 주요 이벤트는 input, focus, blur</h3>
+    <input type="text" id="inp">
+    
+    <h3>마우스이벤트 mouseenter, mouseleave</h3>
+    <div style="width:100px; height: 100px; border:2px solid darkslategrey" id="ms">
+
+    </div>
+
+    <script>
+        /* 
+        각 태그의 이벤트를 걸어서 console 창으로 동작을 확인
+        1. select tag는 인라인 이벤트
+        2. input tag는 기본이벤트
+        3. div tag는 표준이벤트
+         */
+        let a=document.getElementById("sel");
+        a.onchange=function(){
+            alert("변경되었읍니다.");
+        }
+        let b=document.getElementById("inp");
+        b.oninput=function(){
+            // 입출력시 발생
+            //alert("키보드에서 손떼!!!!!!!");
+            console.log("input 이벤트");
+        }
+        b.onfocus=function(){
+            //인풋박스에 입력커서가 활성화돼있을때 동작
+            //alert("아직도 안뗐나?");
+            console.log("focus 이벤트");
+        }
+        b.onblur=function(){
+            //인풋박스에 입력커서가 비활성화돼있을때 동작 
+            //focus가 먼저 동작해야 blur가 동작함.
+            //alert("이건 무슨기능임?");
+            console.log("blue 이벤트");
+        }
+        let c=document.getElementById("ms");
+        //c.addEventListener("mouseenter",function(){console.log("이건뭐임1");});
+        //c.addEventListener("mouseleave",function(){console.log("이건뭐임2");});
+        
+        // 해당 범위에 마우스 커서가 위치할때 이벤트 동작
+        c.addEventListener("mouseenter",function(){alert("드루와!");});
+        // 해당 범위에서 마우스 커서가 이탈할때 이벤트 동작
+        c.addEventListener("mouseleave",function(){alert("나가!!!");});
+                
+
+
+    </script>
+
+</body>
+</html>

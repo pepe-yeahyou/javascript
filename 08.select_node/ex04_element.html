@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>엘리먼트의 속성 변경하기</h3>
+    
+    
+    <div>
+        <img src="./img/1.jpg" alt="default 이미지" width="200" class="image">
+        <select class="sel">
+            <option value="1.jpg">봄</option>
+            <option value="2.jpg">여름</option>
+            <option value="3.jpg">가을</option>
+            <option value="4.jpg">겨울</option>
+        </select>
+
+        <button type="button" id="change">이미지 변경하기</button>
+    </div>
+    
+    <script>
+        let img=document.querySelector(".image"); //이미지
+        let sel=document.querySelector(".sel"); // 선택
+        let btn=document.getElementById("change"); // 버튼
+        // select 태그에 속성(value)에 접근하려면..
+        
+        btn.onclick=function(){
+            //태그의 속성명 태그명,속성 으로 접근
+            /* console.log(sel.value);
+            console.log(img.src); */
+            img.src='./img/'+sel.value;
+        }
+    </script>
+
+    <hr>
+
+    <h3>이벤트의 종류만 잘 선택하면 됩니다.</h3>
+    <div>
+        <img src="./img/1.jpg" alt="default 이미지" width="200" class="image1">
+        <select class="sel1">
+            <option value="1.jpg">봄</option>
+            <option value="2.jpg">여름</option>
+            <option value="3.jpg">가을</option>
+            <option value="4.jpg">겨울</option>
+        </select>
+    </div>
+    
+    <script>
+        let img1=document.querySelector(".image1"); //이미지
+        let sel1=document.querySelector(".sel1"); // 선택
+       
+        sel1.addEventListener("change",function(){
+            img1.src='./img/'+sel1.value;
+        });
+    </script>
+    
+
+
+
+</body>
+</html>

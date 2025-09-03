@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM basic event</title>
+</head>
+<body>
+    <h3>기본 이벤트(속성방식)</h3>
+    <!-- id = 화면에서 고유한 이름 -->
+    <button type="button" id="my-btn">기본이벤트</button>
+
+    <script>
+        /* 
+            이벤트는 1개만 등록 가능. 여러개 걸어봤자 마지막에 등록한 이벤트만 등록됨.(덮어쓰기)
+            1. 버튼태그에 이벤트를 걸기위해서, 버튼 태그를 얻음
+         */
+        let btn = document.getElementById("my-btn");
+        //console.log(btn);
+        /* 
+        btn.onclick=sayHello; // 선언된 함수를 입력받을땐, ()를 넣지않음. 
+        function sayHello(){...} 
+        */
+
+        //2. 버튼태그 onclick 속성에 함수를 대입.
+        btn.onclick = function(){ // 이벤트 속성(onclick)
+            //document.write("ㅎㅇ");
+            alert("ㅂㅇ");
+        }  
+    </script>
+</body>
+</html>

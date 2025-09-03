@@ -46,6 +46,7 @@ console.log(newArr);
 
 console.log("====================================");
 // filter - 조건에 맞는 값으로 새로운 배열을 생성함.
+// arr.filter(function(item,index){}); - 기본 틀
 let newArr2=arr.filter(function(item,index){
     return item%2===0; // 짝수면 true, 홀수면 false
 });

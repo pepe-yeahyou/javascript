@@ -6,12 +6,14 @@
 let user={name:"",addr:"서울시"};
 console.log(registUser(user));
 
+//function registUser(obj){...}
 function registUser(){
     try { 
+    //if(user.name.length<=2||user.name==null){ ... }
     if(user.name.length===0 || user.name.length<=2){
+        // throw new Error("이름은 3글자 이상입니다.");
         console.log("name은 2글자 이상이어야 합니다.");
-    }
-    else{
+    }else{
         return user.name;
     }
     } catch (error) {

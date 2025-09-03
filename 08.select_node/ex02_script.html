@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doCuMent bASic obJeCt</title>
+</head>
+<body>
+    <h3>css 선택자 문법으로 엘리먼트 선택</h3>
+
+    <ul class="box">
+        <li>이시간</li>
+        <li>만되면</li>
+        <li>졸리당</li>
+    </ul>
+    <script>
+        //최초 발견된 태그1개
+        let li=document.querySelector(".box > li");
+        console.log(li);
+
+        let lis=document.querySelectorAll(".box > li");
+        console.log(lis);    
+    </script>
+
+    <hr>
+    <h3>DOM 탐색을 선택적으로 하는방법</h3>
+
+    <div class="wrap">
+        <select class="sel">
+            <option>사과</option>
+            <option>딸기</option>
+            <option>멜론</option>
+        </select>
+    </div>
+
+    <script>
+        // wrap 태그에서만 option 태그를 재탐색
+        let wrap=document.querySelector(".wrap");
+        //console.log(wrap);
+        let options=wrap.querySelectorAll(".sel > option");
+        console.log(options);
+        
+
+        
+
+    </script>
+
+
+</body>
+</html>

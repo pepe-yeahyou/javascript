@@ -21,5 +21,5 @@ function gugudan(num){
     console.log(`${num} x ${i} = ${num*i}`);
 }
 
-gugudan(12345789, 1);
+gugudan(12345789);
 

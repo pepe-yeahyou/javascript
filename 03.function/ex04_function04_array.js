@@ -21,4 +21,5 @@ function getNum(arr){
 
 new play=getNum([1,2,3,4,5,6]);
 console.log(play);
- 
+
+

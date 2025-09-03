@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Basic Event</title>
+</head>
+<body>
+
+    <h3>인라인 이벤트</h3>
+    
+    <!--  <button type="button" onclick="sayHello('hello');">눌러봐ㅋ</button>-->
+    <button type="button" onclick="sayHello(this);">눌러봐ㅋ</button>
+
+    <script>
+        // 함수에 파라미터를 추가할 수 있음.
+        function sayHello(param){
+            // alert("hello!");
+            // alert(param);
+            console.log(param); // 태그의 핸들링이 가능?
+        } 
+    </script>
+    
+    
+</body>
+</html>
