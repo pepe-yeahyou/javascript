@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create element</title>
+</head>
+<body>
+    <h3>엘리먼트 추가하기</h3>
+    <div id="content">
+
+    <!-- 1회용 추가 -->
+    <button type="button" id="btn1">innerHTML로 추가하기</button>
+    </div>
+    <hr>
+        <ul id="box">
+        </ul>
+        <!--  누적(n회) 추가  -->
+        <button type="button" id="btn2">createElement로 추가하기</button>
+    <script>
+        let ctn=document.getElementById("content");
+        let btn1=document.getElementById("btn1");
+
+        btn1.onclick=function(){
+            let str=`
+                <h3> innerHTML을 통해 h3 tag 추가됨</h3>
+                <a href='#'>이동</a>
+            `;
+            ctn.innerHTML=str;
+        }
+        //createElement, appendChild
+        let btn2=document.getElementById("btn2");
+        let box=document.getElementById("box"); //박스!!
+        
+        btn2.onclick=function(){
+            let li=document.createElement("li");
+            let a=document.createElement("a");
+            let img=document.createElement("img");
+
+            //속성을 넣고싶을땐
+            a.href="https://www.google.com";
+            a.innerHTML="구글로 이동하기"
+
+            // li의 자식으로 a를 조립(추가)함
+            li.appendChild(a);
+            
+            //box!!의 마지막 자식으로 추가한다
+            box.appendChild(li);
+        }
+
+    </script>
+
+    
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM BasiC EvenT</title>
+</head>
+<body>
+    <h3>엘리먼트 클래스 속성 다루기</h3>
+
+    <button type="button" id="btn"> 클래스 변경하기 </button>
+    <div class="box" id="targetBox">
+        내용
+    </div>
+
+    <script>
+        /* 클래스를 다루는 버튼같은 경우, 계속 클래스명이 변경되기때문에 id속성을 이용해서 처리하는게 좋음 */
+        let b1=document.getElementById("btn"); // 버튼
+        //let b2=document.querySelector(".box"); // 박스
+        
+        b1.onclick=function(){
+            //b2.class="changebox"; //안됨. class는 classname으로 변경해야됨
+            //b2.className="changebox";
+            //let b2=document.querySelector(".box"); // class -> toggle 작동안함
+            let b2=document.getElementById("targetBox"); // ID -> toggle 작동함
+
+
+            if(b2.className==="box"){
+                b2.className="changebox";
+            }else{
+                b2.className="box";
+            }
+        }
+    </script>
+
+    <hr>
+    <h3>클래스 속성을 추가 / 삭제하기</h3>
+    <button type="button" id="add">추가</button>
+    <button type="button" id="remove">삭제</button>
+    <button type="button" id="toggle">토글</button>
+    <div class="content" id="content">
+
+
+    </div>
+
+    <style>
+        .content{
+            border: 2px solid darkolivegreen;
+            height:100px;
+            width:100px;
+            transition: all 1s ease-in-out;
+        }
+        .content.active{
+            background-color: yellow;
+            border: 2px solid ;
+            font-size: 20px;
+        }
+    </style>
+    
+    <script>
+        let a=document.getElementById("add");
+        let r=document.getElementById("remove");
+        let t=document.getElementById("toggle");
+        let c=document.getElementById("content");
+        a.addEventListener("click",function(){
+            //클래스의 이름을 배열형태로 표현
+            c.classList.add("active");
+            /* add() - 클래스 추가
+                remove() - 클래스 삭제
+                contains()) - 
+                toggle(); - 
+
+            */
+            
+        });
+
+        r.addEventListener("click",function(){
+            c.classList.remove("active")  
+            //클래스의 이름을 배열형태로 표현
+        });
+         t.addEventListener("click",function(){
+            c.classList.toggle("active")
+            //클래스의 이름을 배열형태로 표현
+        });
+
+
+           
+
+
+
+    </script>
+
+
+</body>
+</html>

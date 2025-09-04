@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>doM bAsiC eveNt quIz</title>
+</head>
+<body>
+    <h1>자바스크립트 카운트(value 속성을 이용해서 카운트 처리하세요.)</h1>
+
+    <div>
+        <input type="text" value=0 id="inp">
+        <button type="button" id="plus">+</button>
+        <button type="button" id="minus">-</button>
+    </div>
+
+    <script>
+
+        // value가 0일때가 조건 아님? 왜안됨?
+        // input text는 "문자열"인데 왜 처리가 안됨?
+        // cnt.value는 any면 다 들어갈수있는거아님?
+        
+        let cnt=document.getElementById("inp");
+        let p=document.getElementById("plus");
+        let m=document.getElementById("minus");
+        
+        p.onclick = function(){
+            //cnt.value++;
+            cnt.textContent="0보다 큰 값이어야합니다";
+0        };
+        
+        /* p.addEventListener("click",function(){
+            cnt.value++;
+            //cnt.textContent="0보다 큰 값이어야합니다";
+        }); */
+
+        // innerhtml / textContent는 태그와 태그의 사이값을 처리해줌 
+        // 속성을 처리하는게 아님.
+        m.addEventListener("click",function(){
+            if(cnt.value>0){
+                cnt.value--;
+            }else{
+                cnt.textContent="0보다 큰 값이어야합니다";
+            }
+        });
+    </script>
+
+    
+</body>
+</html>

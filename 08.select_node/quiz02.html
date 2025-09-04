@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dOM bASiC evENt qUiz</title>
+</head>
+<body>
+
+    좌석:
+    <input type="checkbox" name="seat" value="1">1
+    <input type="checkbox" name="seat" value="2">2
+    <input type="checkbox" name="seat" value="3">3
+    <input type="checkbox" name="seat" value="4">4
+    <input type="checkbox" name="seat" value="5">5
+    <input type="checkbox" name="seat" value="6">6
+    <input type="checkbox" name="seat" value="7">7
+    <input type="checkbox" name="seat" value="8">8
+    <input type="checkbox" name="seat" value="9">9
+    <p></p>
+    <button type="button" id="bt">예약하기</button>
+    <p></p>
+    예약번호 : 
+    <div class="result"></div>
+
+    <script>
+        let rv=document.getElementById("bt");
+        //class지만, 배열로 받아들이기때문에 출력하지않음..... 어렵구만... 즉, queryselector로 호출해야됨
+        //let rs=document.getElementsByClassName("result"); 
+        let rs=document.querySelector(".result");
+        let st=document.querySelectorAll("input[name=seat]"); // 배열반환
+        // st배열에는 input 태그 9개 들어있음
+        //console.log(st[1].checked);
+        
+        rv.addEventListener("click",function(){
+            /* 
+            1. 체크된 좌석을 저장할수있는 []생성
+            2. 반복문을 이용해서 체크여부 확인, 체크되어있으면 배열에 추가
+            3. 반복문이 종료되면, checked에 대해서만 rs태그에 innerhtml로 추가
+             */
+            let ckd=[];
+            for(let i=0;i<st.length;i++){
+            //console.log(st[i].checked);
+                if(st[i].checked){
+                    ckd.push(st[i].value);
+                    // ckd+=st[i].value; // 이딴식으로 넣는게아니라 push로;;
+                }    
+            }
+            if(ckd.length===0){
+                alert("좌석체크하세요");
+            }else{
+                rs.innerHTML=ckd;
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>

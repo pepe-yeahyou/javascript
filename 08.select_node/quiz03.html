@@ -1,0 +1,63 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        input{
+            outline: none;
+        }
+    </style>
+    <!-- 
+     ID : 4글자 미만 빨간 / 이상 초록색
+    PW : 9글자 미만 빨간 / 이상 초록
+      -->
+
+    아이디 <input type="text" id="id1" style="border : 3px solid black">
+    <div id="id2"></div>
+    비밀번호 <input type="password" id="pw1" style="border : 3px solid black">
+    <div id="pw2"></div>
+
+    <script>
+        let id=document.getElementById("id1");
+        let idbox=document.getElementById("id2");
+        let pw=document.getElementById("pw1");
+        let pwbox=document.getElementById("pw2");
+        let chk=0;
+
+        id.addEventListener("input",function(){
+            console.log(id.value.length);
+            if(id.value.length>3){
+                id.style.border="3px solid green";
+                idbox.innerHTML="<br>"
+            }
+            else{
+                id.style.border="3px solid red";  
+                idbox.textContent="아이디는 4글자 이상이어야합니다."; 
+            }
+        });
+        
+        pw.addEventListener("input",function(){
+            console.log(pw.value.length);
+            if(pw.value.length>8){
+                pw.style.border="3px solid blue";
+                pwbox.innerHTML="<br>"
+            }else{
+                pw.style.border="3px solid red";  
+                pwbox.textContent="패스워드는 9글자 이상이어야합니다."; 
+            }
+        });
+
+
+
+
+    </script>
+    
+</body>
+</html>

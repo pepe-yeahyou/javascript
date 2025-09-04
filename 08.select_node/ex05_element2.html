@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>CSS 속성 변경하기</h3>
+    
+    
+    <div>
+        <img src="./img/1.jpg" alt="default 이미지" width="200" class="image" style="border: 2px solid black">
+        <select class="sel">
+            <option value="1.jpg">봄</option>
+            <option value="2.jpg">여름</option>
+            <option value="3.jpg">가을</option>
+            <option value="4.jpg">겨울</option>
+        </select>
+        <input type="color" class="color">
+        <button type="button" id="change">이미지 변경하기</button>
+    </div>
+
+
+    
+    <script>
+        let img=document.querySelector(".image"); //이미지
+        let sel=document.querySelector(".sel"); // 선택
+        let btn=document.getElementById("change"); // 버튼
+        // select 태그에 속성(value)에 접근하려면..
+        let cor=document.querySelector(".color"); //컬러태그
+        
+        btn.onclick=function(){
+            //태그의 속성명 태그명,속성 으로 접근
+            /* console.log(sel.value);
+            console.log(img.src); */
+            img.src='./img/'+sel.value;
+            //css 속성을 변경 - 색상은 value로 가져오면됨
+            //console.log(cor.value);
+            
+            /* 
+            색상은 바뀌지않음. 이유 : border 두께가 0px이기때문
+            이 경우 img tag에 style 속성에서 border를 추가해서 처리하면됨.
+            */
+            //img.style.borderColor=cor.value;
+            // 또는
+            img.style.border="5px solid"+cor.value;
+            
+        }
+    </script>
+
+    <hr>
+
+
+    
+
+
+
+</body>
+</html>
